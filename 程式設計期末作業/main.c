@@ -7,7 +7,9 @@
 
 #include <stdlib.h>
 #include <stdio.h>
+#include "matrix.h"
 
 int main(void){
-    printf("hello world!");
+    Matrix3x3 ini= create_zero_matrix();
+    print_matrix(ini);
 }
