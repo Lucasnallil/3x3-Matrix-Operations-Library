@@ -19,16 +19,11 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C72CA2552EF1142300BA72A7 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
+		C72CA2562EF1142300BA72A7 /* matrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = matrix.h; sourceTree = "<group>"; };
+		C72CA2572EF1142300BA72A7 /* matrix.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = matrix.c; sourceTree = "<group>"; };
 		C72D54AB2EEC032100E5FCF8 /* 程式設計期末作業 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "程式設計期末作業"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
-
-/* Begin PBXFileSystemSynchronizedRootGroup section */
-		C72D54AD2EEC032100E5FCF8 /* 程式設計期末作業 */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "程式設計期末作業";
-			sourceTree = "<group>";
-		};
-/* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C72D54A82EEC032100E5FCF8 /* Frameworks */ = {
@@ -41,10 +36,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		C72CA2582EF1142300BA72A7 /* 程式碼 */ = {
+			isa = PBXGroup;
+			children = (
+				C72CA2552EF1142300BA72A7 /* main.c */,
+				C72CA2562EF1142300BA72A7 /* matrix.h */,
+				C72CA2572EF1142300BA72A7 /* matrix.c */,
+			);
+			path = "程式碼";
+			sourceTree = "<group>";
+		};
 		C72D54A22EEC032100E5FCF8 = {
 			isa = PBXGroup;
 			children = (
-				C72D54AD2EEC032100E5FCF8 /* 程式設計期末作業 */,
+				C72CA2582EF1142300BA72A7 /* 程式碼 */,
 				C72D54AC2EEC032100E5FCF8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -71,9 +76,6 @@
 			buildRules = (
 			);
 			dependencies = (
-			);
-			fileSystemSynchronizedGroups = (
-				C72D54AD2EEC032100E5FCF8 /* 程式設計期末作業 */,
 			);
 			name = "程式設計期末作業";
 			packageProductDependencies = (
