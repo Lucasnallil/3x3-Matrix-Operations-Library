@@ -74,6 +74,32 @@ Matrix3x3 element_wise_multiplication(Matrix3x3 a,Matrix3x3 b){
     }
     return ans;
 }
+//linear function
+Matrix3x3 multiplication(Matrix3x3 a,Matrix3x3 b){
+    Matrix3x3 ans={0};
+    int i,j;
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            for(int k=0;k<3;k++){
+                ans.matrix[i][j]=ans.matrix[i][j]+a.matrix[i][k]*b.matrix[k][j];
+            }
+        }
+    }
+    return ans;
+
+}
+
+Matrix3x3 transpose(Matrix3x3 a){
+    Matrix3x3 ans={0};
+    int i,j;
+    for(i=0;i<3;i++){
+        for(j=0;j<3;j++){
+            ans.matrix[i][j]=a.matrix[j][i];
+            }
+        }
+    return ans;
+
+}
 
 
 

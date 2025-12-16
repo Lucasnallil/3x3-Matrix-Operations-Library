@@ -30,5 +30,12 @@ int main(void){
     
     ans=element_wise_multiplication(a, b);
     print_matrix(ans);
+    
+    ans=multiplication(a, b);
+    print_matrix(ans);
+    
+    ans=transpose(a);
+    print_matrix(ans);
+    
 }
 

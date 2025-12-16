@@ -15,13 +15,15 @@ Matrix3x3 create_zero_matrix(void);
 
 void print_matrix(Matrix3x3 a);
 
-
 Matrix3x3 enter_element(Matrix3x3 a);
-
+//basic
 Matrix3x3 addition(Matrix3x3 a,Matrix3x3 b);
 
 Matrix3x3 subtraction(Matrix3x3 a,Matrix3x3 b);
 
 Matrix3x3 element_wise_multiplication(Matrix3x3 a,Matrix3x3 b);
+//linear
+Matrix3x3 multiplication(Matrix3x3 a,Matrix3x3 b);
 
+Matrix3x3 transpose(Matrix3x3 a);
 #endif
