@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C73E4F932EF11AE9000FF8FD /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = C72CA2552EF1142300BA72A7 /* main.c */; };
+		C73E4F942EF11AE9000FF8FD /* matrix.h in Sources */ = {isa = PBXBuildFile; fileRef = C72CA2562EF1142300BA72A7 /* matrix.h */; };
+		C73E4F952EF11AE9000FF8FD /* matrix.c in Sources */ = {isa = PBXBuildFile; fileRef = C72CA2572EF1142300BA72A7 /* matrix.c */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXCopyFilesBuildPhase section */
 		C72D54A92EEC032100E5FCF8 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
@@ -122,6 +128,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C73E4F932EF11AE9000FF8FD /* main.c in Sources */,
+				C73E4F942EF11AE9000FF8FD /* matrix.h in Sources */,
+				C73E4F952EF11AE9000FF8FD /* matrix.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
