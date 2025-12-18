@@ -139,5 +139,69 @@ double det3x3(Matrix3x3 a){
 }
 
 
+Matrix2x2 get_minor(Matrix3x3 a, int row, int col) {
+    Matrix2x2 res={0};
+    int r2 = 0;
+    for (int i = 0; i < 3; i++) {
+        if (i == row) continue;
+        int c2 = 0;
+        for (int j = 0; j < 3; j++) {
+            if (j == col) continue;
+            res.matrix22[r2][c2] = a.matrix[i][j];
+            c2++;
+        }
+        r2++;
+    }
+    return res;
+}
+
+
+Matrix3x3 adjoint(Matrix3x3 a) {
+    Matrix3x3 ans = {0};
+    int i, j;
+    
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            
+            Matrix2x2 minor_mat = get_minor(a, i, j);
+            
+            
+            double cofactor = det2x2(minor_mat);
+            if ((i + j) % 2 != 0) {
+                cofactor = -cofactor;
+            }
+
+            ans.matrix[j][i] = cofactor;
+        }
+    }
+    return ans;
+}
+
+
+Matrix3x3 inverse(Matrix3x3 a) {
+  
+    double det = det3x3(a);
+    
+  
+    if (det == 0) {
+        printf("Error: Determinant is 0, inverse matrix does not exist.\n");
+
+        return create_zero_matrix3x3();
+    }
+    
+
+    Matrix3x3 adj = adjoint(a);
+    
+  
+    Matrix3x3 inv = {0};
+    int i, j;
+    for (i = 0; i < 3; i++) {
+        for (j = 0; j < 3; j++) {
+            inv.matrix[i][j] = adj.matrix[i][j] / det;
+        }
+    }
+    
+    return inv;
+}
 
 

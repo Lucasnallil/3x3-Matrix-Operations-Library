@@ -47,5 +47,11 @@ int main(void){
     print_matrix(a);
     det_ans=det3x3(a);
     printf("ans=%lf\n",det_ans);
+    
+    ans=adjoint(a);
+    print_matrix(ans);
+    
+    ans=inverse(a);
+    print_matrix(ans);
 }
 

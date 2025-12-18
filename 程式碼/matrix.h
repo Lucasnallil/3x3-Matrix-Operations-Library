@@ -38,4 +38,10 @@ Matrix3x3 transpose(Matrix3x3 a);
 double det2x2(Matrix2x2 a);
 
 double det3x3(Matrix3x3 a);
+
+Matrix2x2 get_minor(Matrix3x3 a, int row, int col);
+
+Matrix3x3 adjoint(Matrix3x3 a);
+
+Matrix3x3 inverse(Matrix3x3 a);
 #endif
