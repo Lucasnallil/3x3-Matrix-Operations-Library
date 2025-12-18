@@ -10,10 +10,12 @@
 #include "matrix.h"
 
 int main(void){
-    Matrix3x3 ini= create_zero_matrix();
+    Matrix3x3 ini= create_zero_matrix3x3();
     Matrix3x3 a={0};
     Matrix3x3 b={0};
+    Matrix2x2 c={0};
     Matrix3x3 ans={0};
+    double det_ans=0;
     print_matrix(ini);
     
     a=enter_element(a);
@@ -37,5 +39,13 @@ int main(void){
     ans=transpose(a);
     print_matrix(ans);
     
+    c=enter_element2x2(c);
+    print_matrix2x2(c);
+    det_ans=det2x2(c);
+    printf("ans=%lf\n",det_ans);
+    
+    print_matrix(a);
+    det_ans=det3x3(a);
+    printf("ans=%lf\n",det_ans);
 }
 

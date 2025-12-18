@@ -7,7 +7,7 @@
 #include "matrix.h"
 #include <stdio.h>
 
-Matrix3x3 create_zero_matrix(void){
+Matrix3x3 create_zero_matrix3x3(void){
     int i;
     int j;
     Matrix3x3 a={0};
@@ -98,9 +98,45 @@ Matrix3x3 transpose(Matrix3x3 a){
             }
         }
     return ans;
-
+}
+//advance
+Matrix2x2 enter_element2x2(Matrix2x2 a){
+    int i;
+    int j;
+    for(i=0;i<2;i++){
+        for(j=0;j<2;j++){
+            scanf("%lf",&a.matrix22[i][j]);
+        }
+    }
+    return a;
 }
 
+void print_matrix2x2(Matrix2x2 a){
+    int i,j;
+    for(i=0;i<2;i++){
+        printf("|");
+        for(j=0;j<2;j++){
+            printf("%lf ",a.matrix22[i][j]);
+        }
+        printf("|\n");
+    }
+}
+
+double det2x2(Matrix2x2 a){
+    double det_ans;
+    det_ans=0;
+    det_ans=(a.matrix22[0][0]*a.matrix22[1][1])-(a.matrix22[1][0]*a.matrix22[0][1]);
+    return det_ans;
+}
+
+double det3x3(Matrix3x3 a){
+    double det_ans;
+    det_ans=0;
+    det_ans=(a.matrix[0][0]*((a.matrix[2][2]*a.matrix[1][1])-(a.matrix[1][2]*a.matrix[2][1])))+
+            (a.matrix[2][0]*((a.matrix[0][1]*a.matrix[1][2])-(a.matrix[0][2]*a.matrix[1][1])))-
+            (a.matrix[1][0]*((a.matrix[0][1]*a.matrix[2][2])-(a.matrix[0][2]*a.matrix[2][1])));
+    return det_ans;
+}
 
 
 
